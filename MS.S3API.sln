@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35027.167
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MS.S3API", "MS.S3API\MS.S3API.csproj", "{D94AFFC1-03D5-4E44-A9EA-D6AD4FEA8540}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D94AFFC1-03D5-4E44-A9EA-D6AD4FEA8540}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D94AFFC1-03D5-4E44-A9EA-D6AD4FEA8540}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D94AFFC1-03D5-4E44-A9EA-D6AD4FEA8540}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D94AFFC1-03D5-4E44-A9EA-D6AD4FEA8540}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E074A5A6-7838-4DAD-8680-D34186621115}
+	EndGlobalSection
+EndGlobal
