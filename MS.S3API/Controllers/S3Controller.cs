@@ -77,7 +77,8 @@ namespace MS.S3API.Controllers
                             UploadId = uploadId,
                             PartNumber = partNumber,
                             PartSize = bytesRead,
-                            InputStream = stream
+                            InputStream = stream,
+                            DisablePayloadSigning = true
                         };
 
                         var uploadPartResponse = await _s3Client.UploadPartAsync(uploadPartRequest);
@@ -89,6 +90,8 @@ namespace MS.S3API.Controllers
                             ChecksumCRC32C = uploadPartResponse.ChecksumCRC32C,
                             ChecksumSHA1 = uploadPartResponse.ChecksumSHA1,
                             ChecksumSHA256 = uploadPartResponse.ChecksumSHA256,
+                           
+
                         });
                         partNumber++;
                         filePosition += bytesRead;

@@ -1,3 +1,4 @@
+using Amazon;
 using Amazon.Extensions.NETCore.Setup;
 using Amazon.S3;
 
@@ -14,6 +15,7 @@ awsOptions.Credentials = new Amazon.Runtime.BasicAWSCredentials(
     builder.Configuration["AWS:AccessKey"],
     builder.Configuration["AWS:SecretKey"]
 );
+//AWSConfigsS3.UseSignatureVersion4 = true;
 builder.Services.AddAWSService<IAmazonS3>(awsOptions);
 
 var app = builder.Build();
