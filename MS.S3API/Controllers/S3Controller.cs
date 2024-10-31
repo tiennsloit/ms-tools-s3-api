@@ -52,7 +52,7 @@ namespace MS.S3API.Controllers
                 //initialize the upload
                 string uploadId = await InitializeMultipartUpload(fileKey);
 
-                var uploadPartResponses = await GetPartRequests(file, fileKey, uploadId);
+                var uploadPartResponses = await UploadParts(file, fileKey, uploadId);
 
                 //upload parts
                 if (uploadPartResponses == null) throw new Exception("");
@@ -115,7 +115,7 @@ namespace MS.S3API.Controllers
             return uploadId;
         }
 
-        private async Task<List<UploadPartResponse>> GetPartRequests(IFormFile file, string fileKey, string uploadId)
+        private async Task<List<UploadPartResponse>> UploadParts(IFormFile file, string fileKey, string uploadId)
         {
             int partNumber = 1;
             long filePosition = 0;
