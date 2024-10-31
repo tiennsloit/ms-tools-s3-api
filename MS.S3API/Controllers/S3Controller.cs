@@ -10,7 +10,8 @@ namespace MS.S3API.Controllers
     {
        
         private readonly ILogger<S3Controller> _logger;
-        private const string BucketName = "m-s-tools";
+        //ms-tool is the one for R2
+        private const string BucketName = "ms-tool";//S3: "m-s-tools";
         private readonly IAmazonS3 _s3Client;
 
 
@@ -49,7 +50,7 @@ namespace MS.S3API.Controllers
                 var uploadRequest = new CreateMultipartUploadRequest
                 {
                     BucketName = BucketName,
-                    Key = fileKey
+                    Key = fileKey,
                 };
 
                 var uploadResponse = await _s3Client.InitiateMultipartUploadAsync(uploadRequest.BucketName, uploadRequest.Key);
@@ -98,7 +99,7 @@ namespace MS.S3API.Controllers
                         BucketName = BucketName,
                         Key = fileKey,
                         UploadId = uploadId,
-                        PartETags = partETags
+                        PartETags = partETags,
                     };
 
                     var completeResult = await _s3Client.CompleteMultipartUploadAsync(completeMultipartUploadRequest);
